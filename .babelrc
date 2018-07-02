@@ -1,0 +1,25 @@
+{
+  "presets": [
+    ["es2015",
+      {
+        "modules": false
+      }
+    ],
+    "react",
+    ["env", {
+      "modules": false,
+      "targets": {
+        "browsers": ["last 2 versions", "safari >= 7"]
+      }
+    }]
+  ],
+  "plugins": [
+    "babel-plugin-transform-object-rest-spread",
+    "transform-class-properties"
+  ],
+  "env": {
+    "test": {
+      "plugins": ["transform-es2015-modules-commonjs"]
+    }
+  }
+}
