@@ -1,15 +1,22 @@
 import React from 'react';
-import { Route, BrowserRouter } from 'react-router-dom';
-import Home from '../components/layouts/home/HomeContainer.jsx';
+import { Redirect, Switch, Route, BrowserRouter } from 'react-router-dom';
+import MainLayout from '../components/layouts/MainLayout.jsx';
+import LoginContainer from '../components/layouts/login/LoginContainer.jsx';
+import { MuiThemeProvider, } from '@material-ui/core/styles';
+import { theme, } from '../styles/theme';
 
 
 const createRoutes = () => {
     return (
-        <BrowserRouter >
-            <div>
-                <Route exact path="/" component={Home} />
-            </div>
-        </BrowserRouter>
+        <MuiThemeProvider theme={theme}>
+            <BrowserRouter >
+                <Switch>
+                    <Redirect exact from="/" to="/home" />
+                    <Route exact path="/" component={LoginContainer} />
+                    <MainLayout/>
+                </Switch>
+            </BrowserRouter>
+        </MuiThemeProvider>
     );
 };
 
