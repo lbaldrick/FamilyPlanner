@@ -18,13 +18,23 @@ module.exports = {
          use: ['babel-loader']
        },
        {
-       test: /\.scss$/,
-       use:  [
-         'style-loader',
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-          'sass-loader']
-      }
+           test: /\.scss$/,
+           use:  [
+             'style-loader',
+              MiniCssExtractPlugin.loader,
+              'css-loader',
+              'sass-loader']
+      },
+      {
+         test: /\.html$/,
+         use: [
+             {
+                 loader: "html-loader",
+                 options: { minimize: true }
+             }
+         ]
+      },
+
      ]
    },
    resolve: {
