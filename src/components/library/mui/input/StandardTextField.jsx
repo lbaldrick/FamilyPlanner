@@ -8,7 +8,7 @@ const styles = theme => ({
     },
 });
 
-const StandardCheckbox = ({classes, id, displayName, value, onChange, margin="normal"}) => {
+const StandardTextField = ({classes, id, displayName, value, onChange, margin="normal"}) => {
     return ( <TextField
             id={id}
             label={displayName}
@@ -30,4 +30,4 @@ StandardCheckbox.propTypes = {
 };
 
 
-export default withStyles(styles)(StandardCheckbox);
+export default withStyles(styles)(StandardTextField);
