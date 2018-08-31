@@ -1,6 +1,7 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import PropTypes from 'prop-types';
+import withStyles from "@material-ui/core/es/styles/withStyles";
 
 const styles = theme => ({
     root: {
@@ -14,13 +15,13 @@ const StandardTextField = ({classes, id, displayName, value, onChange, margin="n
             label={displayName}
             className={classes.root}
             value={value}
-            onChange={onChange}
+            onChange={(event) => onChange(id, event.target.value)}
             margin={margin}
         />
     );
 };
 
-StandardCheckbox.propTypes = {
+StandardTextField.propTypes = {
     classes: PropTypes.object.isRequired,
     id: PropTypes.string.isRequired,
     displayName: PropTypes.string.isRequired,

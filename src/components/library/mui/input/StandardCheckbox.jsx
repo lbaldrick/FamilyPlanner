@@ -1,6 +1,7 @@
 import React from 'react';
 import Checkbox from '@material-ui/core/Checkbox';
 import PropTypes from 'prop-types';
+import withStyles from "@material-ui/core/es/styles/withStyles";
 
 const styles = theme => ({
     root: {

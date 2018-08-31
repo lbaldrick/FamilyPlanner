@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 
 class LoginFooter extends PureComponent {
   render() {
-    <div className='login-footer'>
+      return <div className='login-footer'>
       {this.props.children}
     </div>
   }

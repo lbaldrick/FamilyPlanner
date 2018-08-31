@@ -2,6 +2,7 @@ import React from 'react';
 import List from '@material-ui/core/List';
 import PropTypes from 'prop-types';
 import StandardListItem from './StandardListItem.jsx';
+import withStyles from "@material-ui/core/es/styles/withStyles";
 
 const styles = theme => ({
     root: {

@@ -1,4 +1,4 @@
-import auth0 from 'auth0';
+import auth0 from 'auth0-js';
 
 class AuthenticationService {
   auth0 = new auth0.WebAuth({
@@ -56,3 +56,6 @@ class AuthenticationService {
   }
 
 }
+
+const authenticationService = new AuthenticationService();
+export default authenticationService;

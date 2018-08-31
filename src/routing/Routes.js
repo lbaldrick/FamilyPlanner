@@ -5,6 +5,7 @@ import LoginContainer from '../components/layouts/login/LoginContainer.jsx';
 import { MuiThemeProvider, } from '@material-ui/core/styles';
 import { theme, } from '../styles/theme';
 import {configureStore} from '../redux/Store.js';
+import Provider from "react-redux/es/components/Provider";
 
 
 const createRoutes = () => {
@@ -14,7 +15,6 @@ const createRoutes = () => {
         <MuiThemeProvider theme={theme}>
             <BrowserRouter >
                 <Switch>
-                    <Redirect exact from="/" to="/home" />
                     <Route exact path="/" component={LoginContainer} />
                     <MainLayout/>
                 </Switch>
